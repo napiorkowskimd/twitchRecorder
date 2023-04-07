@@ -16,7 +16,7 @@ function parseCmdArgs() {
   const args = yargs(hideBin(process.argv))
       .command('* <channel> <output>',
           'Record events from channel into file')
-      .positional('file', {
+      .positional('output', {
         describe: 'Output file',
         type: 'string',
       })

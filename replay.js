@@ -12,7 +12,7 @@ const {hideBin} = require('yargs/helpers');
  */
 function parseCmdArgs() {
   const args = yargs(hideBin(process.argv))
-      .command('* [-p port] [-r replaySpeed] <file>', 'Replay recorded events')
+      .command('* [-p port] [-r rate] <file>', 'Replay recorded events')
       .alias('p', 'port')
       .default('p', 8080)
       .describe('p', 'Port to serve from')
