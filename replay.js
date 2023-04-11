@@ -142,8 +142,7 @@ async function doReplay(ws, paybackRatio, inputFile, initialChannelState) {
 
     const replacementTs = Date.now();
     const replacedLine =
-        line.replace(timestampPattern,
-            '$`tmi-sent-ts=' + replacementTs + '"$\'');
+        line.replace(timestampPattern, `tmi-sent-ts=${replacementTs}`);
     prevMessageTs = ts;
     ws.send(replacedLine);
   }
